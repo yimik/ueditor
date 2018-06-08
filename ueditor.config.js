@@ -237,6 +237,8 @@
     //    }
     //}()
 
+    //,withCredentials:true //请求是否允许跨域
+
     //,allHtmlEnabled:false //提交到后台的数据是否包含整个html字符串
 
     //insertorderedlist

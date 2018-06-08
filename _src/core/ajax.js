@@ -103,6 +103,9 @@ UE.ajax = (function() {
       (url.indexOf("?") == -1 ? "?" : "&") +
       (method == "POST" ? "" : submitStr + "&noCache=" + +new Date());
     xhr.open(method, str, ajaxOpts.async);
+    if(ajaxOpts.withCredentials){
+        xhr.withCredentials = true;
+    }
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4) {
         if (!timeIsOut && xhr.status == 200) {

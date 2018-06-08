@@ -359,6 +359,7 @@
             }
 
             uploader = _this.uploader = WebUploader.create({
+                withCredentials:editor.getOpt('withCredentials'),
                 pick: {
                     id: '#filePickerReady',
                     label: lang.uploadSelectFile

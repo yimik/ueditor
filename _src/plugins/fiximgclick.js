@@ -106,6 +106,7 @@ UE.plugins["fiximgclick"] = (function() {
             break;
           case "mousemove":
             if (me.dragId != -1) {
+              me.showCover();
               me.updateContainerStyle(me.dragId, {
                 x: e.clientX - me.prePos.x,
                 y: e.clientY - me.prePos.y
@@ -118,6 +119,7 @@ UE.plugins["fiximgclick"] = (function() {
             break;
           case "mouseup":
             if (me.dragId != -1) {
+              me.hideCover();
               me.updateContainerStyle(me.dragId, {
                 x: e.clientX - me.prePos.x,
                 y: e.clientY - me.prePos.y
@@ -227,7 +229,7 @@ UE.plugins["fiximgclick"] = (function() {
         domUtils.on(this.resizer, "mousedown", me.proxy(me._eventHandler, me));
         domUtils.on(me.doc, "mouseup", me.proxy(me._eventHandler, me));
 
-        me.showCover();
+        // me.showCover();
         me.editor.fireEvent("afterscaleshow", me);
         me.editor.fireEvent("saveScene");
       },
@@ -259,14 +261,14 @@ UE.plugins["fiximgclick"] = (function() {
           left:
             iframePos.x +
               imgPos.x -
-              me.editor.document.body.scrollLeft -
+              (me.editor.document.documentElement.scrollLeft|| me.editor.document.body.scrollLeft) -
               editorPos.x -
               parseInt(resizer.style.borderLeftWidth) +
               "px",
           top:
             iframePos.y +
               imgPos.y -
-              me.editor.document.body.scrollTop -
+              (me.editor.document.documentElement.scrollTop || me.editor.document.body.scrollTop) -
               editorPos.y -
               parseInt(resizer.style.borderTopWidth) +
               "px"
