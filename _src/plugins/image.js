@@ -296,6 +296,7 @@ UE.commands["insertimage"] = {
       }
 
       me.execCommand("insertHtml", html.join(""));
+      me.execCommand("insertparagraph");
     }
 
     me.fireEvent("afterinsertimage", opt);
