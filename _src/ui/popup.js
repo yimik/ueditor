@@ -206,7 +206,7 @@
       popEl.className +=
         " " + ANCHOR_CLASSES[(sideUp ? 1 : 0) * 2 + (sideLeft ? 1 : 0)];
       if (this.editor) {
-        popEl.style.zIndex = this.editor.container.style.zIndex * 1 + 10;
+        popEl.style.zIndex = this.editor.options.dialogZIndex * 1 + 10;
         baidu.editor.ui.uiUtils.getFixedLayer().style.zIndex =
           popEl.style.zIndex - 1;
       }

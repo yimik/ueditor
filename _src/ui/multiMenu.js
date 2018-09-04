@@ -26,9 +26,9 @@
               '_iframe" src="' +
               me.iframeUrl +
               '" frameborder="0"></iframe>';
-            me.editor.container.style.zIndex &&
+            me.editor.options.dialogZIndex &&
               (this.getDom().style.zIndex =
-                me.editor.container.style.zIndex * 1 + 1);
+                  me.editor.options.dialogZIndex * 1 + 1);
           }
         }
         // canSideUp:false,

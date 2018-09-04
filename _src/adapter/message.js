@@ -62,6 +62,6 @@ UE.registerUI("message", function(editor) {
       holder.style.top = toolbarbox.offsetHeight + 3 + "px";
     }
     holder.style.zIndex =
-      Math.max(me.options.zIndex, me.iframe.style.zIndex) + 1;
+      Math.max(me.options.dialogZIndex, me.iframe.style.zIndex) + 1;
   }
 });

@@ -14,6 +14,7 @@ UE.Editor.defaultOptions = function(editor) {
     fullscreen: false,
     readonly: false,
     zIndex: 999,
+    dialogZIndex:999,
     imagePopup: true,
     enterTag: "p",
     customDomain: false,

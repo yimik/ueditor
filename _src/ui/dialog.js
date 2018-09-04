@@ -378,9 +378,9 @@
         this.getDom().style.display = "";
 
         //要高过编辑器的zindxe
-        this.editor.container.style.zIndex &&
+        this.editor.options.dialogZIndex &&
           (this.getDom().style.zIndex =
-            this.editor.container.style.zIndex * 1 + 10);
+            this.editor.options.dialogZIndex * 1 + 10);
         this._hidden = false;
         this.fireEvent("show");
         baidu.editor.ui.uiUtils.getFixedLayer().style.zIndex =

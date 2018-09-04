@@ -42,7 +42,7 @@ UE.plugins["fiximgclick"] = (function() {
         cover.id = me.editor.ui.id + "_imagescale_cover";
         cover.style.cssText =
           "position:absolute;display:none;z-index:" +
-          me.editor.options.zIndex +
+          me.editor.options.dialogZIndex +
           ";filter:alpha(opacity=0); opacity:0;background:#CCC;";
         domUtils.on(cover, "mousedown click", function() {
           me.hide();
@@ -58,7 +58,7 @@ UE.plugins["fiximgclick"] = (function() {
         resizer.innerHTML = hands.join("");
         resizer.style.cssText +=
           ";display:none;border:1px solid #3b77ff;z-index:" +
-          me.editor.options.zIndex +
+          me.editor.options.dialogZIndex +
           ";";
 
         me.editor.ui.getDom().appendChild(cover);
