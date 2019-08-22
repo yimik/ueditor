@@ -117,6 +117,7 @@ UE.plugin.register("autoupload", function() {
     fd.append("type", "ajax");
     xhr.open("post", url, true);
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    xhr.withCredentials = me.getOpt('withCredentials');
     xhr.addEventListener("load", function(e) {
       try {
         var json = new Function("return " + utils.trim(e.target.response))();
