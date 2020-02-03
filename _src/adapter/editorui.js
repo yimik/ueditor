@@ -29,7 +29,7 @@
 
   var iframeUrlMap = {
     anchor: "~/dialogs/anchor/anchor.html",
-    insertimage: "~/dialogs/image/image.html",
+    insertimage: "~/dialogs/image/image.html?v=0.1",
     link: "~/dialogs/link/link.html",
     spechars: "~/dialogs/spechars/spechars.html",
     searchreplace: "~/dialogs/searchreplace/searchreplace.html",
@@ -50,7 +50,7 @@
     scrawl: "~/dialogs/scrawl/scrawl.html",
     music: "~/dialogs/music/music.html",
     template: "~/dialogs/template/template.html",
-    background: "~/dialogs/background/background.html",
+    background: "~/dialogs/background/background.html?v=0.1",
     charts: "~/dialogs/charts/charts.html"
   };
   //为工具栏添加按钮，以下都是统一的按钮触发命令，所以写在一起

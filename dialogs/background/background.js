@@ -257,11 +257,11 @@
 
             if(!_this.listEnd && !this.isLoadingData) {
                 this.isLoadingData = true;
-                var url = editor.getActionUrl(editor.getOpt('imageManagerActionName')),
-                    isJsonp = utils.isCrossDomainUrl(url);
+                var url = editor.getActionUrl(editor.getOpt('imageManagerActionName'));
                 ajax.request(url, {
+                    'headers': editor.options.ajaxHeaderRender ? editor.options.ajaxHeaderRender() : null,
                     'timeout': 100000,
-                    'dataType': isJsonp ? 'jsonp':'',
+                    'dataType': '',
                     'data': utils.extend({
                             start: this.listIndex,
                             size: this.listSize
@@ -269,7 +269,7 @@
                     'method': 'get',
                     'onsuccess': function (r) {
                         try {
-                            var json = isJsonp ? r:eval('(' + r.responseText + ')');
+                            var json = eval('(' + r.responseText + ')');
                             if (json.state == 'SUCCESS') {
                                 _this.pushData(json.list);
                                 _this.listIndex = parseInt(json.start) + parseInt(json.list.length);

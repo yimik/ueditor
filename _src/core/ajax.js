@@ -102,9 +102,12 @@ UE.ajax = (function() {
       url +
       (url.indexOf("?") == -1 ? "?" : "&") +
       (method == "POST" ? "" : submitStr + "&noCache=" + +new Date());
-    xhr.open(method, str, ajaxOpts.async);
-    if(ajaxOpts.withCredentials){
-        xhr.withCredentials = true;
+      xhr.open(method, str, ajaxOpts.async);
+    // 如果有自定义请求头
+    if (ajaxOpts.headers) {
+      for (var key in ajaxOpts.headers) {
+        xhr.setRequestHeader(key, ajaxOpts.headers[key]);
+      }
     }
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4) {

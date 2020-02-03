@@ -24,221 +24,224 @@
      * 配置项主体。注意，此处所有涉及到路径的配置别遗漏URL变量。
      */
   window.UEDITOR_CONFIG = {
-    //为编辑器实例添加一个路径，这个不能被注释
-    UEDITOR_HOME_URL: URL,
+      //为编辑器实例添加一个路径，这个不能被注释
+      UEDITOR_HOME_URL: URL,
 
-    // 服务器统一请求接口路径
-    serverUrl: URL + "php/controller.php",
+      // 服务器统一请求接口路径
+      serverUrl: URL + "php/controller.php",
 
-    //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的重新定义
-    toolbars: [
-      [
-        "fullscreen",
-        "source",
-        "|",
-        "undo",
-        "redo",
-        "|",
-        "bold",
-        "italic",
-        "underline",
-        "fontborder",
-        "strikethrough",
-        "superscript",
-        "subscript",
-        "removeformat",
-        "formatmatch",
-        "autotypeset",
-        "blockquote",
-        "pasteplain",
-        "|",
-        "forecolor",
-        "backcolor",
-        "insertorderedlist",
-        "insertunorderedlist",
-        "selectall",
-        "cleardoc",
-        "|",
-        "rowspacingtop",
-        "rowspacingbottom",
-        "lineheight",
-        "|",
-        "customstyle",
-        "paragraph",
-        "fontfamily",
-        "fontsize",
-        "|",
-        "directionalityltr",
-        "directionalityrtl",
-        "indent",
-        "|",
-        "justifyleft",
-        "justifycenter",
-        "justifyright",
-        "justifyjustify",
-        "|",
-        "touppercase",
-        "tolowercase",
-        "|",
-        "link",
-        "unlink",
-        "anchor",
-        "|",
-        "imagenone",
-        "imageleft",
-        "imageright",
-        "imagecenter",
-        "|",
-        "simpleupload",
-        "insertimage",
-        "emotion",
-        "scrawl",
-        "insertvideo",
-        "music",
-        "attachment",
-        "map",
-        "gmap",
-        "insertframe",
-        "insertcode",
-        "webapp",
-        "pagebreak",
-        "template",
-        "background",
-        "|",
-        "horizontal",
-        "date",
-        "time",
-        "spechars",
-        "snapscreen",
-        "wordimage",
-        "|",
-        "inserttable",
-        "deletetable",
-        "insertparagraphbeforetable",
-        "insertrow",
-        "deleterow",
-        "insertcol",
-        "deletecol",
-        "mergecells",
-        "mergeright",
-        "mergedown",
-        "splittocells",
-        "splittorows",
-        "splittocols",
-        "charts",
-        "|",
-        "print",
-        "preview",
-        "searchreplace",
-        "drafts",
-        "help"
+      //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的重新定义
+      toolbars: [
+          [
+              "fullscreen",
+              "source",
+              "|",
+              "undo",
+              "redo",
+              "|",
+              "bold",
+              "italic",
+              "underline",
+              "fontborder",
+              "strikethrough",
+              "superscript",
+              "subscript",
+              "removeformat",
+              "formatmatch",
+              "autotypeset",
+              "blockquote",
+              "pasteplain",
+              "|",
+              "forecolor",
+              "backcolor",
+              "insertorderedlist",
+              "insertunorderedlist",
+              "selectall",
+              "cleardoc",
+              "|",
+              "rowspacingtop",
+              "rowspacingbottom",
+              "lineheight",
+              "|",
+              "customstyle",
+              "paragraph",
+              "fontfamily",
+              "fontsize",
+              "|",
+              "directionalityltr",
+              "directionalityrtl",
+              "indent",
+              "|",
+              "justifyleft",
+              "justifycenter",
+              "justifyright",
+              "justifyjustify",
+              "|",
+              "touppercase",
+              "tolowercase",
+              "|",
+              "link",
+              "unlink",
+              "anchor",
+              "|",
+              "imagenone",
+              "imageleft",
+              "imageright",
+              "imagecenter",
+              "|",
+              "simpleupload",
+              "insertimage",
+              "emotion",
+              "scrawl",
+              "insertvideo",
+              "music",
+              "attachment",
+              "map",
+              "gmap",
+              "insertframe",
+              "insertcode",
+              "webapp",
+              "pagebreak",
+              "template",
+              "background",
+              "|",
+              "horizontal",
+              "date",
+              "time",
+              "spechars",
+              "snapscreen",
+              "wordimage",
+              "|",
+              "inserttable",
+              "deletetable",
+              "insertparagraphbeforetable",
+              "insertrow",
+              "deleterow",
+              "insertcol",
+              "deletecol",
+              "mergecells",
+              "mergeright",
+              "mergedown",
+              "splittocells",
+              "splittorows",
+              "splittocols",
+              "charts",
+              "|",
+              "print",
+              "preview",
+              "searchreplace",
+              "drafts",
+              "help"
+          ]
       ]
-    ]
-    //当鼠标放在工具栏上时显示的tooltip提示,留空支持自动多语言配置，否则以配置值为准
-    //,labelMap:{
-    //    'anchor':'', 'undo':''
-    //}
+      //当鼠标放在工具栏上时显示的tooltip提示,留空支持自动多语言配置，否则以配置值为准
+      //,labelMap:{
+      //    'anchor':'', 'undo':''
+      //}
 
-    //语言配置项,默认是zh-cn。有需要的话也可以使用如下这样的方式来自动多语言切换，当然，前提条件是lang文件夹下存在对应的语言文件：
-    //lang值也可以通过自动获取 (navigator.language||navigator.browserLanguage ||navigator.userLanguage).toLowerCase()
-    //,lang:"zh-cn"
-    //,langPath:URL +"lang/"
+      //语言配置项,默认是zh-cn。有需要的话也可以使用如下这样的方式来自动多语言切换，当然，前提条件是lang文件夹下存在对应的语言文件：
+      //lang值也可以通过自动获取 (navigator.language||navigator.browserLanguage ||navigator.userLanguage).toLowerCase()
+      //,lang:"zh-cn"
+      //,langPath:URL +"lang/"
 
-    //主题配置项,默认是default。有需要的话也可以使用如下这样的方式来自动多主题切换，当然，前提条件是themes文件夹下存在对应的主题文件：
-    //现有如下皮肤:default
-    //,theme:'default'
-    //,themePath:URL +"themes/"
+      //主题配置项,默认是default。有需要的话也可以使用如下这样的方式来自动多主题切换，当然，前提条件是themes文件夹下存在对应的主题文件：
+      //现有如下皮肤:default
+      //,theme:'default'
+      //,themePath:URL +"themes/"
 
-    //,zIndex : 900     //编辑器层级的基数,默认是900
-    //,dialogZIndex:999 //编辑器弹窗层级的基数,默认是999
+      //,zIndex : 900     //编辑器层级的基数,默认是900
+      //,dialogZIndex:999 //编辑器弹窗层级的基数,默认是999
 
-    //针对getAllHtml方法，会在对应的head标签中增加该编码设置。
-    //,charset:"utf-8"
+      //针对getAllHtml方法，会在对应的head标签中增加该编码设置。
+      //,charset:"utf-8"
 
-    //若实例化编辑器的页面手动修改的domain，此处需要设置为true
-    //,customDomain:false
+      //若实例化编辑器的页面手动修改的domain，此处需要设置为true
+      //,customDomain:false
 
-    //常用配置项目
-    //,isShow : true    //默认显示编辑器
+      //常用配置项目
+      //,isShow : true    //默认显示编辑器
 
-    //,textarea:'editorValue' // 提交表单时，服务器获取编辑器提交内容的所用的参数，多实例时可以给容器name属性，会将name给定的值最为每个实例的键值，不用每次实例化的时候都设置这个值
+      //,textarea:'editorValue' // 提交表单时，服务器获取编辑器提交内容的所用的参数，多实例时可以给容器name属性，会将name给定的值最为每个实例的键值，不用每次实例化的时候都设置这个值
 
-    //,initialContent:'欢迎使用ueditor!'    //初始化编辑器的内容,也可以通过textarea/script给值，看官网例子
+      //,initialContent:'欢迎使用ueditor!'    //初始化编辑器的内容,也可以通过textarea/script给值，看官网例子
 
-    //,autoClearinitialContent:true //是否自动清除编辑器初始内容，注意：如果focus属性设置为true,这个也为真，那么编辑器一上来就会触发导致初始化的内容看不到了
+      //,autoClearinitialContent:true //是否自动清除编辑器初始内容，注意：如果focus属性设置为true,这个也为真，那么编辑器一上来就会触发导致初始化的内容看不到了
 
-    //,focus:false //初始化时，是否让编辑器获得焦点true或false
+      //,focus:false //初始化时，是否让编辑器获得焦点true或false
 
-    //如果自定义，最好给p标签如下的行高，要不输入中文时，会有跳动感
-    //,initialStyle:'p{line-height:1em}'//编辑器层级的基数,可以用来改变字体等
+      //如果自定义，最好给p标签如下的行高，要不输入中文时，会有跳动感
+      //,initialStyle:'p{line-height:1em}'//编辑器层级的基数,可以用来改变字体等
 
-    //,iframeJsUrl: '' //给编辑区域的iframe引入一个js文件
-    //,iframeCssUrl: URL + '/themes/iframe.css' //给编辑区域的iframe引入一个css文件
+      //,iframeJsUrl: '' //给编辑区域的iframe引入一个js文件
+      //,iframeCssUrl: URL + '/themes/iframe.css' //给编辑区域的iframe引入一个css文件
 
-    //indentValue
-    //首行缩进距离,默认是2em
-    //,indentValue:'2em'
+      //indentValue
+      //首行缩进距离,默认是2em
+      //,indentValue:'2em'
 
-    //,initialFrameWidth:1000  //初始化编辑器宽度,默认1000
-    //,initialFrameHeight:320  //初始化编辑器高度,默认320
+      //,initialFrameWidth:1000  //初始化编辑器宽度,默认1000
+      //,initialFrameHeight:320  //初始化编辑器高度,默认320
 
-    //,readonly : false //编辑器初始化结束后,编辑区域是否是只读的，默认是false
+      //,readonly : false //编辑器初始化结束后,编辑区域是否是只读的，默认是false
 
-    //,autoClearEmptyNode : true //getContent时，是否删除空的inlineElement节点（包括嵌套的情况）
+      //,autoClearEmptyNode : true //getContent时，是否删除空的inlineElement节点（包括嵌套的情况）
 
-    //启用自动保存
-    //,enableAutoSave: true
-    //自动保存间隔时间， 单位ms
-    //,saveInterval: 500
+      //启用自动保存
+      //,enableAutoSave: true
+      //自动保存间隔时间， 单位ms
+      //,saveInterval: 500
 
-    //启用拖放上传
-    //,enableDragUpload: true
-    //启用粘贴上传
-    //,enablePasteUpload: true
+      //启用拖放上传
+      //,enableDragUpload: true
+      //启用粘贴上传
+      //,enablePasteUpload: true
 
-    //启用图片拉伸缩放
-    //,imageScaleEnabled: true
+      //启用图片拉伸缩放
+      //,imageScaleEnabled: true
 
-    //,fullscreen : false //是否开启初始化时即全屏，默认关闭
+      //,fullscreen : false //是否开启初始化时即全屏，默认关闭
 
-    //,imagePopup:true      //图片操作的浮层开关，默认打开
+      //,imagePopup:true      //图片操作的浮层开关，默认打开
 
-    //,autoSyncData:true //自动同步编辑器要提交的数据
-    //,emotionLocalization:false //是否开启表情本地化，默认关闭。若要开启请确保emotion文件夹下包含官网提供的images表情文件夹
+      //,autoSyncData:true //自动同步编辑器要提交的数据
+      //,emotionLocalization:false //是否开启表情本地化，默认关闭。若要开启请确保emotion文件夹下包含官网提供的images表情文件夹
 
-    //粘贴只保留标签，去除标签所有属性
-    //,retainOnlyLabelPasted: false
+      //粘贴只保留标签，去除标签所有属性
+      //,retainOnlyLabelPasted: false
 
-    //,pasteplain:false  //是否默认为纯文本粘贴。false为不使用纯文本粘贴，true为使用纯文本粘贴
-    //纯文本粘贴模式下的过滤规则
-    //'filterTxtRules' : function(){
-    //    function transP(node){
-    //        node.tagName = 'p';
-    //        node.setStyle();
-    //    }
-    //    return {
-    //        //直接删除及其字节点内容
-    //        '-' : 'script style object iframe embed input select',
-    //        'p': {$:{}},
-    //        'br':{$:{}},
-    //        'div':{'$':{}},
-    //        'li':{'$':{}},
-    //        'caption':transP,
-    //        'th':transP,
-    //        'tr':transP,
-    //        'h1':transP,'h2':transP,'h3':transP,'h4':transP,'h5':transP,'h6':transP,
-    //        'td':function(node){
-    //            //没有内容的td直接删掉
-    //            var txt = !!node.innerText();
-    //            if(txt){
-    //                node.parentNode.insertAfter(UE.uNode.createText(' &nbsp; &nbsp;'),node);
-    //            }
-    //            node.parentNode.removeChild(node,node.innerText())
-    //        }
-    //    }
-    //}()
+      //,pasteplain:false  //是否默认为纯文本粘贴。false为不使用纯文本粘贴，true为使用纯文本粘贴
+      //纯文本粘贴模式下的过滤规则
+      //'filterTxtRules' : function(){
+      //    function transP(node){
+      //        node.tagName = 'p';
+      //        node.setStyle();
+      //    }
+      //    return {
+      //        //直接删除及其字节点内容
+      //        '-' : 'script style object iframe embed input select',
+      //        'p': {$:{}},
+      //        'br':{$:{}},
+      //        'div':{'$':{}},
+      //        'li':{'$':{}},
+      //        'caption':transP,
+      //        'th':transP,
+      //        'tr':transP,
+      //        'h1':transP,'h2':transP,'h3':transP,'h4':transP,'h5':transP,'h6':transP,
+      //        'td':function(node){
+      //            //没有内容的td直接删掉
+      //            var txt = !!node.innerText();
+      //            if(txt){
+      //                node.parentNode.insertAfter(UE.uNode.createText(' &nbsp; &nbsp;'),node);
+      //            }
+      //            node.parentNode.removeChild(node,node.innerText())
+      //        }
+      //    }
+      //}()
 
-    //,withCredentials:true //请求是否允许跨域
+      // ajax请求时，附带的header内容
+      // ,ajaxHeaderRender:function(){
+      //     return {"Authorization":localStorage.getItem("login_token")};
+      // }
 
     //,allHtmlEnabled:false //提交到后台的数据是否包含整个html字符串
 

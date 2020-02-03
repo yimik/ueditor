@@ -12,19 +12,19 @@
             )
           );
 
-        var configUrl = me.getActionUrl("config"),
-          isJsonp = utils.isCrossDomainUrl(configUrl);
+        var configUrl = me.getActionUrl("config");
 
-        /* 发出ajax请求 */
+      /* 发出ajax请求 */
         me._serverConfigLoaded = false;
 
         configUrl &&
           UE.ajax.request(configUrl, {
             method: "GET",
-            dataType: isJsonp ? "jsonp" : "",
+            headers: me.options.ajaxHeaderRender ? me.options.ajaxHeaderRender() : null,
+            dataType: "",
             onsuccess: function(r) {
               try {
-                var config = isJsonp ? r : eval("(" + r.responseText + ")");
+                var config = eval("(" + r.responseText + ")");
                 utils.extend(me.options, config);
                 me.fireEvent("serverConfigLoaded");
                 me._serverConfigLoaded = true;
